@@ -13,29 +13,29 @@ public class Ex3 {
 
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
-        double Media = 0;
-        int Number;
-        int Soma, Maior, Menor, QtdNumeros;
+        double media = 0;
+        int number;
+        int soma, maior, menor, qtdNumeros;
         // Inicializa as variáveis
-        Soma = Maior = Menor = QtdNumeros = 0;
-        Number = input.nextInt();
-        while(Number != -1){
-            QtdNumeros++;
-            if(Number > Maior){
+        soma = maior = menor = qtdNumeros = 0;
+        number = input.nextInt();
+        while(number != -1){
+            qtdNumeros++;
+            if(number > maior){
                 // Atualiza valores
-                if(Maior < Menor || (Menor == 0 && QtdNumeros >= 2)){
-                    Menor = Maior;
+                if(maior < menor || (menor == 0 && qtdNumeros >= 2)){
+                    menor = maior;
                 }
-                Maior = Number;
+                maior = number;
                 
             }
-            else if(Number < Menor || (Menor == 0 && QtdNumeros >= 2)){
-                Menor = Number;
+            else if(number < menor || (menor == 0 && qtdNumeros >= 2)){
+                menor = number;
             }
-            Soma += Number;
-            Media = Soma / (double)QtdNumeros;
-            Number = input.nextInt();
+            soma += number;
+            media = soma / (double)qtdNumeros;
+            number = input.nextInt();
         }
-        System.out.println("Media: "+Media+"\nMaior: "+Maior+"\nMenor: "+Menor+"\nQuantidade: "+QtdNumeros);
+        System.out.println("Media: "+media+"\nMaior: "+maior+"\nMenor: "+menor+"\nQuantidade: "+qtdNumeros);
     }
 }
