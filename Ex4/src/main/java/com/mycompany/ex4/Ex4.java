@@ -12,30 +12,30 @@ import java.util.Scanner;
 public class Ex4 {
 
      public static void main(String[] args) {
-       Scanner Input = new Scanner(System.in);
-       int Qtd = 0;
-       int Soma = 0;
-       String Entrada = Input.nextLine();
+       Scanner input = new Scanner(System.in);
+       int qtd = 0;
+       int soma = 0;
+       String entrada = input.nextLine();
        // Fatiando a string
-       String[] Partes = Entrada.split(" ");
+       String[] partes = entrada.split(" ");
        // Iterando sobre a string
-       for(int i = Partes.length - 1; i >= 0; i--){
-           for(int j = Partes[i].length() - 1; j >= 0; j--){
-               char N = Partes[i].charAt(j);
+       for(int i = partes.length - 1; i >= 0; i--){
+           for(int j = partes[i].length() - 1; j >= 0; j--){
+               char n = partes[i].charAt(j);
                // Convertendo e verificando condicionais 
-               int Number = Character.getNumericValue(N);
-               if(!(Qtd % 2 == 0)){
-                   Number *= 2;
-                   if(Number > 9){
-                       Number -= 9;
+               int number = Character.getNumericValue(n);
+               if(!(qtd % 2 == 0)){
+                   number *= 2;
+                   if(number > 9){
+                       number -= 9;
                    }
                }
-               Soma += Number;
-               Qtd++;
+               soma += number;
+               qtd++;
            }
        }
        // Verifica se é válido ou não
-       if(Soma % 10 == 0){
+       if(soma % 10 == 0){
            System.out.println("Valido");
        }
        else{
