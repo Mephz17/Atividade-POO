@@ -16,11 +16,13 @@ public class Ex3 {
         double Media = 0;
         int Number;
         int Soma, Maior, Menor, QtdNumeros;
+        // Inicializa as variáveis
         Soma = Maior = Menor = QtdNumeros = 0;
         Number = input.nextInt();
         while(Number != -1){
             QtdNumeros++;
             if(Number > Maior){
+                // Atualiza valores
                 if(Maior < Menor || (Menor == 0 && QtdNumeros >= 2)){
                     Menor = Maior;
                 }
